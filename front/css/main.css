@@ -1,0 +1,73 @@
+.panel:not(.main-panel-active):not(.ping-panel-active) {
+    visibility: hidden;
+    position: fixed;
+    max-width: 0%;
+    max-height: 0%;
+}
+#currentPing {
+    display: inline;
+    position: absolute;
+}
+#pingDelay {
+    margin-top: 15px;
+}
+#pingDelayDisplay {
+    margin-top: 0px;
+}
+#panelPing > div > form > button.btn {
+    margin-top: 15px;
+}
+#panelPing > canvas {
+    margin: 15px;
+}
+#panelPing {
+    text-align: center;
+}
+.input-success {
+    border-color: lightgreen;
+}
+.input-fail {
+    border-color: red;
+}
+
+.ping-timeout {
+    font: bold 200%;
+} 
+
+.window-options {
+    top: 0%;
+    right: 0%;
+    position: fixed;
+    display: flex;
+}
+
+.toolbar-header {
+    -webkit-app-region: drag;
+}
+
+.window-options,
+.toolbar-footer {
+    -webkit-app-region: no-drag;
+}
+
+.window-option {
+    display: inline-flex;
+    min-height: 22px;
+    min-width: 22px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.window-option > .icon {
+    margin: auto;
+}
+
+.window-option:hover {
+    color: lightgray;
+    background-color: darkgray;
+}
+
+.window-option:active {
+    color: lightgray;
+    background-color: #505050;
+}

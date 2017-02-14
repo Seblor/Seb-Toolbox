@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Seblor's Toolbox</title>
+
+    <!-- Dependencies -->
+    <script type="text/javascript" src="./js/smoothie.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/photon.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- JavaScript -->
+    <script src="js/main.js" charset="utf-8"></script>
+    <script src="js/panel.js" charset="utf-8"></script>
+    <script src="js/ping.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="window">
+
+        <!-- Your app's content goes inside .window-content -->
+        <div class="window-content">
+            <div class="pane-group" id="panels">
+                <div class="pane pane-sm sidebar">
+                    <nav class="nav-group">
+                        <h5 class="nav-group-title">Favorites</h5>
+                        <span class="nav-group-item active" data-panel="panelHome">
+<span class="icon icon-home"></span> Home
+                        </span>
+                        <span class="nav-group-item" data-panel="panelPing">
+<span class="icon icon-light-up"></span> Ping
+                        </span>
+                    </nav>
+                </div>
+                <!-- Panels append here -->
+                <!-- Home Panel -->
+                <div class="pane panel main-panel-active" id="panelHome">
+                    <div class="padded-more">
+                        <h1>Welcome to Seblor's toolbox !</h1>
+                        <hr>
+                        <p>
+                            This ToolBox was developed by Seblor to test Electron's power.
+                            <br> Have fun using it !
+                        </p>
+                    </div>
+                </div>
+                <!-- Ping Panel -->
+                <div class="pane panel ping-panel" id="panelPing">
+                    <div class="padded-more">
+                        <canvas id="pingCanvas0" width="400" height="100"></canvas>
+                        <p id="currentPing"></p>
+                        <br>
+                        <form data-use="ping">
+                            <input type="text" placeholder="google.com">
+                            <span class="icon" id="success0"></span>
+                            <br>
+                            <button class="btn btn-large btn-primary">Change target</button>
+                        </form>
+
+                        <input type="range" id="pingDelay" min="0" max="5000">
+                        <p id="pingDelayDisplay"></p>
+
+                        <p class="ping-timeout" id="timeout0"></p>
+                        <p class="ping-timeout" id="total-timeout0"></p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="toolbar toolbar-footer">
+                <h1 class="title">Seblor</h1>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
